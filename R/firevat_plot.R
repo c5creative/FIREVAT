@@ -385,7 +385,6 @@ PlotTriNucSpectrum <- function(sub.types,
     # Plot
     if (draw.x.axis.labels) {
         axis.text.x <- element_text(size = font.size.small,
-                                    family = "Arial",
                                     colour = "#888888",
                                     angle = 90,
                                     vjust = 0.5,
@@ -396,8 +395,7 @@ PlotTriNucSpectrum <- function(sub.types,
 
     if (draw.y.axis.labels) {
         axis.text.y <- element_text(size = font.size.med - 4,
-                                    family = "Arial",
-                                    colour = "#888888")
+                                   colour = "#888888")
     } else {
         axis.text.y <- element_blank()
     }
@@ -424,7 +422,6 @@ PlotTriNucSpectrum <- function(sub.types,
                 theme(strip.background = element_rect(fill = plot.colors[i],
                                                       colour = plot.colors[i]),
                       strip.text.x = element_text(size = font.size.med - 2,
-                                                  family = "Arial",
                                                   face = "bold",
                                                   colour = strip.text.x.colors[i])) +
                 facet_grid(~title)
@@ -437,14 +434,14 @@ PlotTriNucSpectrum <- function(sub.types,
                                                 plot.margin.left), "cm"))
         } else if(i == 6) {
             p <- p + theme(axis.text.y = element_text(size = font.size.med - 4,
-                                                      family = "Arial", colour = "#FFFFFF00"),
+                                                      colour = "#FFFFFF00"),
                            plot.margin = unit(c(plot.margin.top,
                                                 plot.margin.right,
                                                 plot.margin.bottom,
                                                 0), "cm"))
         } else {
             p <- p + theme(axis.text.y = element_text(size = font.size.med - 4,
-                                                      family = "Arial", colour = "#FFFFFF00"),
+                                                      colour = "#FFFFFF00"),
                            plot.margin = unit(c(plot.margin.top, 0,
                                                 plot.margin.bottom, 0), "cm"))
         }
@@ -459,7 +456,6 @@ PlotTriNucSpectrum <- function(sub.types,
     if (draw.y.axis.title) {
         figure <- annotate_figure(figure,
                                   top = text_grob(title,
-                                                  family = "Arial",
                                                   color = "black",
                                                   face = "bold",
                                                   size = font.size.med),
